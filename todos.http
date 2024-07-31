@@ -1,0 +1,27 @@
+GET http://localhost:5017/todos
+
+### Get Todo by Id
+GET http://localhost:5017/todos/2
+
+### Create Todo
+POST http://localhost:5017/todos
+Content-Type: application/json
+
+{
+  "todoName": "Go to Library",
+  "description": "Go to Library to read books",
+  "todoDate": "2024-09-01"
+}
+
+### Update Todo
+PUT http://localhost:5017/todos/2
+Content-Type: application/json
+
+{
+  "todoName": "Go to Supermarket",
+  "description": "Go to Supermarket to buy groceries",
+  "todoDate": "2024-09-01"
+}
+
+### Delete Todo
+DELETE http://localhost:5017/todos/2
