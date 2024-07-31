@@ -1,7 +1,9 @@
-﻿namespace TodoList.Api.Dtos;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TodoList.Api.Dtos;
 
 public record class CreateTodoDto(
-    string TodoName, 
-    string Description,
+    [Required][StringLength(45)] string TodoName,
+    [Required][StringLength(90)] string Description,
     DateOnly TodoDate
 );
